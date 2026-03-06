@@ -1,0 +1,125 @@
+/* Stapp – Yasal sayfalar ortak stil (uygulama temasıyla uyumlu) */
+:root {
+  --stapp-red: #F20D0D;
+  --stapp-red-dim: rgba(242, 13, 13, 0.15);
+  --bg-dark: #0A0505;
+  --card-dark: #1A0808;
+  --text: #e8e6e5;
+  --text-muted: #a09d9c;
+  --border: rgba(242, 13, 13, 0.35);
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+  line-height: 1.65;
+  color: var(--text);
+  background: var(--bg-dark);
+  min-height: 100vh;
+  padding: 24px 16px 48px;
+}
+
+.container {
+  max-width: 720px;
+  margin: 0 auto;
+  background: var(--card-dark);
+  padding: 32px 28px;
+  border-radius: 16px;
+  border: 1px solid var(--border);
+  box-shadow: 0 8px 32px rgba(0,0,0,0.4);
+}
+
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px 20px;
+  margin-bottom: 28px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid var(--border);
+}
+
+nav a {
+  color: var(--stapp-red);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+nav a:hover { text-decoration: underline; }
+
+nav a.active { opacity: 1; }
+
+h1 {
+  color: var(--stapp-red);
+  font-size: 26px;
+  font-weight: 800;
+  margin-bottom: 8px;
+  font-style: italic;
+}
+
+.last-updated {
+  color: var(--text-muted);
+  font-size: 13px;
+  margin-bottom: 28px;
+}
+
+h2 {
+  color: var(--stapp-red);
+  font-size: 18px;
+  font-weight: 700;
+  margin-top: 28px;
+  margin-bottom: 12px;
+  padding-bottom: 6px;
+  border-bottom: 1px solid var(--border);
+}
+
+h3 {
+  color: var(--text);
+  font-size: 15px;
+  font-weight: 600;
+  margin-top: 18px;
+  margin-bottom: 8px;
+}
+
+p { margin-bottom: 14px; }
+
+ul { margin: 0 0 14px 22px; }
+
+li { margin-bottom: 6px; }
+
+.contact-box {
+  background: var(--stapp-red-dim);
+  padding: 18px 20px;
+  border-radius: 12px;
+  margin-top: 24px;
+  border-left: 4px solid var(--stapp-red);
+}
+
+.contact-box a {
+  color: var(--stapp-red);
+  font-weight: 600;
+}
+
+.cta-box {
+  background: var(--stapp-red-dim);
+  padding: 20px;
+  border-radius: 12px;
+  margin: 24px 0;
+  border: 1px solid var(--border);
+}
+
+.cta-box strong { color: var(--stapp-red); }
+
+.note {
+  font-size: 13px;
+  color: var(--text-muted);
+  margin-top: 28px;
+  font-style: italic;
+}
+
+@media (max-width: 600px) {
+  .container { padding: 22px 18px; }
+  h1 { font-size: 22px; }
+  body { padding: 16px 12px 32px; }
+}
